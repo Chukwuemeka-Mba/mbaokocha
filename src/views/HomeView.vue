@@ -74,7 +74,7 @@
         </a>
       </div>
       <div class="card3 flex-center card">
-        <h1>EXPERIENCE</h1>
+        <h1>WORK EXPERIENCE</h1>
         <p>
           Current: US Navy.
           <br />
