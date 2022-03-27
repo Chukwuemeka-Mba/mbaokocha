@@ -6,8 +6,6 @@
       </div>
 
       <div class="links">
-        <a href=""><p>About</p></a>
-        <a href=""><p>Work</p></a>
         <a
           href="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/2516bbc2-67bc-436c-a95c-78008a66115c/mbaokocha.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220327%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220327T083539Z&X-Amz-Expires=86400&X-Amz-Signature=aac9e4f6f09be9be99416940945989b4e42a62acf5176675cf6b5452a87d220c&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22mbaokocha.pdf%22&x-id=GetObject"
           target="blank"
