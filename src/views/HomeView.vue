@@ -7,8 +7,12 @@
 
       <div class="links">
         <a href=""><p>About</p></a>
-        <a href="#cards"><p>Work</p></a>
-        <a href=""><p>Resume</p></a>
+        <a href=""><p>Work</p></a>
+        <a
+          href="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/2516bbc2-67bc-436c-a95c-78008a66115c/mbaokocha.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220327%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220327T083539Z&X-Amz-Expires=86400&X-Amz-Signature=aac9e4f6f09be9be99416940945989b4e42a62acf5176675cf6b5452a87d220c&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22mbaokocha.pdf%22&x-id=GetObject"
+          target="blank"
+          ><p>Resume</p></a
+        >
       </div>
     </nav>
 
@@ -53,7 +57,7 @@
           Associate in Liberals, Science. Received Honors Award.
         </p>
         <a href="https://www.linkedin.com/in/mokocha/">
-          <p class="learn">Learn More <i class="fas fa-angle-right"></i></p>
+          <h4 class="learn">Learn More <i class="fas fa-angle-right"></i></h4>
         </a>
       </div>
       <div class="card2 flex-center card">
@@ -64,13 +68,10 @@
           <br />
           Designed different couplers (such as Rat-Race, BranchLine, and
           Directional) and matching networks.
-          <br />
-          Upper Ocean Profiler [Aurelia] (2020). Designed the RF and GPS signal.
-          Also co-design GUI development
         </p>
 
         <a href="https://www.linkedin.com/in/mokocha/">
-          <p class="learn">Learn More <i class="fas fa-angle-right"></i></p>
+          <h4 class="learn">Learn More <i class="fas fa-angle-right"></i></h4>
         </a>
       </div>
       <div class="card3 flex-center card">
@@ -86,7 +87,7 @@
         </p>
 
         <a href="https://www.linkedin.com/in/mokocha/">
-          <p class="learn">Learn More <i class="fas fa-angle-right"></i></p>
+          <h4 class="learn">Learn More <i class="fas fa-angle-right"></i></h4>
         </a>
       </div>
       <div class="card4 flex-center card">
@@ -100,7 +101,7 @@
         </p>
 
         <a href="https://www.linkedin.com/in/mokocha/">
-          <p class="learn">Learn More <i class="fas fa-angle-right"></i></p>
+          <h4 class="learn">Learn More <i class="fas fa-angle-right"></i></h4>
         </a>
       </div>
     </section>
@@ -241,23 +242,40 @@ button {
   font-family: "Montserrat", sans-serif;
   padding: 7px 14px;
   margin: 30px;
-  border: 0px;
   font-size: 15px;
-  background-color: #d3cdb3;
+  background: #d3cdb3;
   color: #000000;
-  transition-property: padding;
-  transition-duration: 0s;
-  transition-delay: 0s;
-  border: 1px solid #ef0d27;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
   border-radius: 5px;
+  border: 1px solid #ef0d27;
+  -webkit-transition: color 150ms ease-in-out;
+  transition: color 150ms ease-in-out;
 }
-
+button:after {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  width: 0;
+  height: 100%;
+  background: #ef0d27;
+  z-index: -1;
+  -webkit-transition: width 150ms ease-in-out;
+  transition: width 150ms ease-in-out;
+}
 button:hover {
-  background-color: #ef0d27;
   padding: 7px 14px;
   border: 1px solid #d3cdb3;
+  color: #fff;
 }
-
+button:hover:after {
+  width: 110%;
+}
 /* Card Styles  */
 
 .cardheader h1 {
@@ -314,15 +332,32 @@ button:hover {
   text-decoration: none;
   color: #000000;
 }
+
 .learn {
-  transition-property: background-color;
-  transition-duration: 0.4s;
-  transition-delay: 0.1s;
-  border-radius: 2px;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  -webkit-transition: color 150ms ease-in-out;
+  transition: color 150ms ease-in-out;
+  padding: 10px 20px;
 }
-.learn:hover {
-  background-color: #ef0d27;
-  padding: 5px 10px;
+.learn:after {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  width: 0;
+  height: 100%;
+  background: #ef0d27;
+  z-index: -1;
+  -webkit-transition: width 150ms ease-in-out;
+  transition: width 150ms ease-in-out;
+}
+.learn:hover:after {
+  width: 110%;
 }
 .card h1 {
   font-family: "Montserrat", sans-serif;
@@ -439,7 +474,6 @@ footer {
   position: absolute;
   left: -2px;
   text-shadow: -5px 0 magenta;
-  background: black;
   overflow: hidden;
   top: 0;
   animation: noise-1 3s linear infinite alternate-reverse,
@@ -451,7 +485,6 @@ footer {
   position: absolute;
   left: 2px;
   text-shadow: -5px 0 lightgreen;
-  background: black;
   overflow: hidden;
   top: 0;
   animation: noise-2 3s linear infinite alternate-reverse, glitch 5s 5s infinite;
